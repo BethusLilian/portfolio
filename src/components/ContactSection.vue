@@ -60,9 +60,9 @@ const message = ref({
   class: ''
 })
 
-const PUBLIC_KEY = 'ZS1KQUWCe1nRWoc7k'
-const SERVICE_ID = 'service_portfolio-Lilian'
-const TEMPLATE_ID = 'template_um3tcbr'
+const PUBLIC_KEY = import.meta.env.VITE_APP_MAIL_PUBLIC_KEY
+const SERVICE_ID = import.meta.env.VITE_APP_MAIL_SERVICE_ID
+const TEMPLATE_ID = import.meta.env.VITE_APP_MAIL_TEMPLATE_ID
 
 const submitForm = () => {
   if (canSendEmail()) send()
@@ -87,7 +87,6 @@ function send() {
       PUBLIC_KEY
     )
     .then((response) => {
-      console.log('Email envoyé avec succès : ', response)
       resetFields()
       buttonDone()
       message.value.description = 'Message envoyé ! vous receverez une réponse sous peu.'
