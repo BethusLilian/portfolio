@@ -6,7 +6,7 @@
       :id="id"
       :value="localValue"
       @input="updateLocalValue($event.target)"
-      class="text-text text-[16px] focus:outline-1 focus:outline-primary p-[16px] rounded-[20px] w-full h-fit shadow-inner-custom"
+      class="text-text text-[16px] focus:outline-1 focus:outline-primary p-[16px] rounded-2xl w-full h-fit shadow-inner-custom"
     />
   </div>
 </template>

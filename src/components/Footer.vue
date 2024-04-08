@@ -1,6 +1,6 @@
 <template>
   <footer
-    class="p-8 md:py-16 px md:px-32 space-y-8 md:flex md:justify-between md:items-center bg-primary bg-opacity-5"
+    class="p-8 md:py-16 px md:px-32 space-y-8 md:space-y-0 md:flex md:justify-between bg-primary bg-opacity-5"
   >
     <div class="space-x-8">
       <a href="#portfolio" class="lien-footer">Mon portfolio</a>
