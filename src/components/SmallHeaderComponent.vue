@@ -1,6 +1,7 @@
 <template>
+  <div class="">
   <div
-    class="flex justify-between pt-4 pb-4 items-center text-text padding transition-all duration-300"
+    class="flex justify-between pt-4 pb-4 items-center text-text padding "
   >
     <router-link to="/"><h4>Lilian Bethus</h4></router-link>
     <nav class="space-x-8 hidden md:block">
@@ -28,14 +29,18 @@
           clip-rule="evenodd"
         />
       </svg>
-      <div
-        :class="{ block: showMenu, hidden: !showMenu }"
-        class="px-2 pb-3 md:flex md:items-center md:justify-end"
-      >
-        <router-link to="/#portfolio"><span class="mytext">Mon portfolio</span></router-link>
-        <router-link to="/#contact"><span class="mytext">Me contacter</span></router-link>
-      </div>
     </nav>
+    
+  </div>
+    <div :class="{ 'h-28 ': showMenu, 'h-0 overflow-hidden ': !showMenu }"
+          class=" transition-all duration-300 "
+    >
+    <div class=" flex flex-col gap-4 items-center transition delay-150 ease-in-out"
+    :class="{ 'opacity-100': showMenu, 'opacity-0': !showMenu }">
+      <router-link to="/#portfolio"><span class="mytext" >Mon portfolio</span></router-link>
+      <router-link to="/#contact"><span class="mytext">Me contacter</span></router-link>
+    </div>
+  </div>
   </div>
 </template>
 

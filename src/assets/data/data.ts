@@ -5,7 +5,7 @@ export const portfolioitems = [
     subtitle: 'Projet UX/UI issue de la formation UX Design - Google Certificate',
     description:
       'Application mobile et site web responsive permettant la mise en relation de professionnels et de jeunes diplomés.',
-    img: '/src/assets/img/mentorme.png',
+    img: '../assets/img/mentorme.png',
     page: 'portfolio/mentorme'
   },
   {
@@ -14,7 +14,7 @@ export const portfolioitems = [
     subtitle: 'Projet UX/UI issue de la formation UX Design - Google Certificate',
     description:
       'Site responsive permettant la consulation des horaires de cours de l’école, l’inscription et la réservation de cours.',
-    img: '/src/assets/img/parkour.png',
+    img: '../assets/img/parkour.png',
     page: 'portfolio/parkour'
   }
 ]

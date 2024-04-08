@@ -7,7 +7,7 @@
       :value="localValue"
       @input="updateLocalValue($event.target)"
       rows="4"
-      class="block p-[16px] h-full text-[16px] text-text rounded-[20px] focus:outline-primary shadow-inner-custom"
+      class="block p-[16px] h-full text-[16px] text-text rounded-2xl focus:outline-primary shadow-inner-custom"
       placeholder="Décrivez votre besoin..."
     ></textarea>
   </div>
