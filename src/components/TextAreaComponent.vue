@@ -5,7 +5,7 @@
       :id="id"
       :name="name"
       :value="localValue"
-      @input="updateLocalValue($event.target.value)"
+      @input="updateLocalValue($event.target)"
       rows="4"
       class="block p-[16px] h-full text-[16px] text-text rounded-[20px] focus:outline-primary shadow-inner-custom"
       placeholder="Décrivez votre besoin..."
@@ -25,9 +25,11 @@ const props = defineProps({
 const emit = defineEmits(['update:modelValue'])
 
 let localValue = props.modelValue
-const updateLocalValue = (newValue: string) => {
-  localValue = newValue
-  emit('update:modelValue', newValue)
+const updateLocalValue = (target: EventTarget | null) => {
+  if(target instanceof HTMLInputElement){
+    localValue = target.value
+    emit('update:modelValue', localValue)
+  }
 }
 
 watch(

@@ -1,5 +1,3 @@
-import { type PortfolioItemContent } from '../../components/PortFolioItem.vue'
-
 export const portfolioitems = [
   {
     id: 1,

@@ -5,14 +5,13 @@
       :type="type"
       :id="id"
       :value="localValue"
-      @input="updateLocalValue($event.target.value)"
+      @input="updateLocalValue($event.target)"
       class="text-text text-[16px] focus:outline-1 focus:outline-primary p-[16px] rounded-[20px] w-full h-fit shadow-inner-custom"
     />
   </div>
 </template>
 
 <script setup lang="ts">
-import { LanguageServiceMode } from 'typescript'
 import { watch } from 'vue'
 
 const props = defineProps({
@@ -24,9 +23,11 @@ const props = defineProps({
 const emit = defineEmits(['update:modelValue'])
 
 let localValue = props.modelValue
-const updateLocalValue = (newValue: string) => {
-  localValue = newValue
-  emit('update:modelValue', newValue)
+const updateLocalValue = (target: EventTarget | null) => {
+  if(target instanceof HTMLInputElement){
+    localValue = target.value
+    emit('update:modelValue', localValue)
+  }
 }
 
 watch(

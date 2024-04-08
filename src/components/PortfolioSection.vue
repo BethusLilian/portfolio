@@ -21,6 +21,6 @@
 
 <script setup lang="ts">
 import PortfolioItem from '../components/PortFolioItem.vue'
-import { portfolioitems } from '../assets/data/data.ts'
+import { portfolioitems } from '../assets/data/data'
 const projets = portfolioitems
 </script>
