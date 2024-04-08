@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600,bold,light, normal|Nunito');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-background;
+}
+
+section {
+  @apply px-4 lg:px-16 xl:px-32 2xl:px-64 mb-64 md:mb-8;
+  @apply mb-16;
+}
+
+h1 {
+  font-family: 'Montserrat';
+  font-weight: bold;
+  line-height: 120%;
+  @apply text-[40px] md:text-[61px];
+}
+
+h2 {
+  font-family: 'Montserrat';
+  font-weight: light;
+  line-height: 120%;
+  @apply text-[36px] lg:text-[49px];
+}
+
+h3 {
+  font-family: 'Montserrat';
+  font-weight: 600;
+  font-size: 39px;
+  line-height: 120%;
+  @apply text-[31px] md:text-[39px];
+}
+
+h4 {
+  font-family: 'Montserrat';
+  font-weight: normal;
+  @apply text-[27px] md:text-[31px];
+}
+
+.nunito {
+  font-family: 'Nunito';
+}
+
+.mytext {
+  font-family: 'Nunito';
+  font-size: 16px;
+}
+
+.sous-titre {
+  font-family: 'Nunito';
+  font-size: 17px;
+}
+
+.btn {
+  @apply rounded-full;
+  @apply px-[32px];
+  @apply py-[12px];
+  @apply w-full md:w-fit;
+  @apply text-[16px] md:text-[12px] lg:text-[16px];
+  font-family: 'Montserrat';
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.15s ease-in-out;
+  cursor: pointer;
+}
+
+.btn-prim {
+  @apply bg-primary;
+  @apply text-background;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.btn:active {
+  transform: scale(1);
+}
+
+.btn-done {
+  @apply rounded-full;
+  @apply w-fit;
+  @apply p-[16px];
+  font-family: 'Montserrat';
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
+  transition: all 0.15s ease-in-out;
+}
+
+.btn-sec {
+  @apply text-primary;
+  @apply border-2;
+  @apply border-primary;
+  @apply bg-opacity-0;
+}
+
+.btn-ter {
+  @apply text-primary;
+  @apply p-0;
+}
+
+.field-label {
+  @apply font-[Montserrat];
+  @apply font-bold;
+  @apply text-[16px];
+  @apply uppercase;
+}
+
+.shadow-inner-custom {
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.25); /* Définir votre ombre interne personnalisée ici */
+}
+
+.debug {
+  @apply border-2 border-rouge;
+}
